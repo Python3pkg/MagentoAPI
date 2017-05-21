@@ -44,7 +44,7 @@ class ProductApi(ma.api.base_class.Api):
             'multi_data': [],
         }
 
-        for k, v in attributes.items():
+        for k, v in list(attributes.items()):
             if issubclass(v.__class__, list) is True:
                 parent_name = 'multi_data'
                 v = ','.join([str(atom) for atom in v])

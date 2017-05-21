@@ -8,7 +8,7 @@ def get_pretty_print(results):
             separators=(',', ': '))
 
 def pretty_print(results):
-    print(get_pretty_print(results))
+    print((get_pretty_print(results)))
 
 def get_dict_from_named_tuple(nt):
     a = dir(nt)

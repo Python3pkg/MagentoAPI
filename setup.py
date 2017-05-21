@@ -11,7 +11,7 @@ with open(os.path.join(_APP_PATH, 'resources', 'README.rst')) as f:
       _LONG_DESCRIPTION = f.read()
 
 with open(os.path.join(_APP_PATH, 'resources', 'requirements.txt')) as f:
-      _INSTALL_REQUIRES = list(map(lambda s: s.strip(), f))
+      _INSTALL_REQUIRES = list([s.strip() for s in f])
 
 setuptools.setup(
     name='magento_adapter',

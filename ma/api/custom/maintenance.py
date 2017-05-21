@@ -27,7 +27,7 @@ class MaintenanceApi(ma.api.base_class.Api):
         # defaults to all entries when nothing to match.
         # Used as flag to process the entire set.
         if l is None:
-            return d.items()
+            return list(d.items())
 
         return  ma.utility.match_dict_keys_from_list(d, l)
 

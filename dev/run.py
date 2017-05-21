@@ -23,7 +23,7 @@ import ma.utility
 def _sales_order_invoice():
     soi = ma.api.sales_order_invoice.SalesOrderInvoiceApi()
 
-    start = datetime.datetime(year=2013, month=05, day=29, hour=0, minute=0, second=0)
+    start = datetime.datetime(year=2013, month=0o5, day=29, hour=0, minute=0, second=0)
     stop = start + datetime.timedelta(seconds=86400)
 
     return soi.get_transactions(start, stop)
